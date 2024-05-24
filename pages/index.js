@@ -49,9 +49,9 @@ export default function Home({ userlist, productlist }) {
 export async function getServerSideProps({ req }) {
 	const session = await getSession({ req });
 	const res = await axios.get(
-		`https://i-life-kfnf.vercel.app/api/auth/signup/`,
+		`https://i-life.vercel.app/api/auth/signup/`,
 	);
-	const res2 = await axios.get(`https://i-life-kfnf.vercel.app/api/products/`);
+	const res2 = await axios.get(`https://i-life.vercel.app/api/products/`);
 
 	if (!session) {
 		return {

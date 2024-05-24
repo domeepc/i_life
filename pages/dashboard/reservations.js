@@ -28,7 +28,7 @@ export default function Reservations({ reservationslist }) {
 export async function getServerSideProps({ req }) {
 	const session = await getSession({ req });
 	const res = await axios.get(
-		`https://i-life-kfnf.vercel.app//api/reservations_u`,
+		`https://i-life.vercel.app//api/reservations_u`,
 	);
 
 	if (!session) {
