@@ -17,11 +17,13 @@ export default NextAuth({
 		FacebookProvider({
 			clientId: process.env.FACEBOOK_CLIENT_ID,
 			clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+			idToken: true,
 		}),
 		TwitterProvider({
 			clientId: process.env.TWITTER_ID,
 			clientSecret: process.env.TWITTER_SECRET,
 			version: "2.0", // opt-in to Twitter OAuth 2.0
+			idToken: true,
 		}),
 		CredencialsProvider({
 			name: "Credencials",
