@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .tooltip {
+    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md 
+    text-black dark:bg-card-dark dark:text-primary-dark  bg-slate-50 text-xs font-bold transition-all duration-100 scale-0 origin-left;
+  }
+
+  .dashboard_cards {
+    @apply relative bg-slate-50 origin-left w-full lg:min-w-max lg:w-max rounded-lg shadow-md p-4 lg:p-6 md:w-96 text-base h-max overflow-hidden z-0 dark:bg-card-dark;
+  }
+
+  .dashboard_list {
+    @apply flex flex-col text-white dark:text-primary-dark gap-8 items-center justify-between;
+  }
+
+  .dashboard_navbar {
+    @apply bg-slate-200 dark:bg-card-dark w-16 h-screen fixed top-0 left-0  -translate-x-full lg:-translate-x-0 transition-all duration-200 ease-in z-40;
+  }
+
+  .active_sidebar {
+    @apply -translate-x-0;
+  }
+
+  .moon {
+    background: #303136;
+    box-shadow: inset -10px 0px 7px -8px #8983f7, inset -7px 0 0 0 #a3dafb;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
